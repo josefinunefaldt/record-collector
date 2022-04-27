@@ -1,5 +1,5 @@
 ---
-title: "Josefin website"
+title: "Favourite surf"
 date: 2022-03-09
 categories:
   - Deployment
@@ -11,4 +11,6 @@ authorname: "Johan Kronberg and josefin"
 authorimage: /files/devon.jpg
 ---
 
-HEJSAAAAAAAAAAAAAAN!
+Sunset surf summer 2021.
+
+![Sketch of Record Collector flow](/files/surf.JPG)
