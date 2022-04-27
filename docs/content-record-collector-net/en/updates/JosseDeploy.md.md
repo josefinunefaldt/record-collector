@@ -6,9 +6,9 @@ categories:
   - Automation
 
 images:
-  - files/devon.jpg
+  - /files/devon.jpg
 authorname: "Johan Kronberg and josefin"
-authorimage: files/devon.jpg
+authorimage: /files/devon.jpg
 ---
 
 HEJSAAAAAAAAAAAAAAN!
