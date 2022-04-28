@@ -1,7 +1,6 @@
 ---
 title: "Best spots in cornwall"
-date: 2021-03-09
-description: "Too many"
+date: 2022-04-29
 categories:
   - Deployment
   - Automation
@@ -11,6 +10,7 @@ authorname: "Josefin"
 authorimage: "/files/jojo.jpg"
 ---
 
-Checkout the best surfing spots.
+Idyllic
 
-<!--more-->
+![Sketch of Record Collector flow](/files/cornwall.JPG)
+![Sketch of Record Collector flow](/files/cornwall2.JPG)
