@@ -1,0 +1,49 @@
+
+#linkedin{
+    top: 16rem;
+    font: 1rem;
+    float: left;
+    z-index: 1000;
+    text-align: center;
+    padding-left: 10px;
+    background-image: linear-gradient(white, white, white,white);
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+    bottom: 0;
+  }
+
+  #github{
+    top: 16rem;
+    font: 1rem;
+    float: left;
+    z-index: 1000;
+    text-align: center;
+    background-image: linear-gradient(white, white, white,white);
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+    bottom: 0;
+  }
+  
+  #linkedin:hover{
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  #github:hover {  
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  #svg{
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+    bottom: 0;
+    left: 0;
+  }
+
+  #josefin{
+      width: 25%;
+      height: 25%;
+      margin-left: 310px;
+      border-radius: 100px;     
+  }
+  
+ 
+
