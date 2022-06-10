@@ -11,13 +11,52 @@ note = ""
 	crossorigin="anonymous"
 	referrerpolicy="no-referrer"
 />
-<link
-	rel="stylesheet"
-	href="/docs/content-record-collector-net/CSS/style.css"
-/>
-
-
 <style>
+
+#linkedin{
+    top: 16rem;
+    font: 1rem;
+    z-index: 1000;
+    background-image: linear-gradient(white, white, white,white);
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  #github{
+    top: 16rem;
+    font: 1rem;
+    z-index: 1000;
+    background-image: linear-gradient(white, white, white,white);
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+  }
+  
+  #linkedin:hover{
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  #github:hover {  
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  #svg{
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+	bottom: 0;
+	left:0;
+    
+  }
+
+  #josefin{
+      width: 25%;
+      height: 25%;
+      margin-left: 19rem;
+      border-radius: 100%;     
+  }
+  #title{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
 	#internshiplink {
 
 		font-size: 12px;
@@ -52,29 +91,35 @@ note = ""
 	.dropdown {
 		position: relative;
 		display: inline-block;
-		padding-left: 10px;
+		padding-left: 1rem;
 	}
 
 	.dropdown-content {
 		display: none;
 		position: absolute;
 		background-color: #f9f9f9;
-		min-width: 160px;
+		min-width: 3rem;
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-		padding: 12px 16px;
+		padding: 1rem 1.5rem;
 		z-index: 1;
-		padding-left: 10px;
+		padding-left: 1rem;
 	}
 
 	.dropdown:hover .dropdown-content {
 		display: block;
-		padding-left: 10px;
+		padding-left: 1rem;
 	}
 
-
+	.mt-2{
+		width: 9rem;
+		float: left;
+		margin-top: 1rem;
+		margin-left: 1rem;
+	}
 </style>
+
 <div class="dropdown">
-	<span>System Developer .NET</span>
+	<span id="developertext">System Developer .NET</span>
 	<div class="dropdown-content">
 		<p id="schooltext">Education</p>
 		<a
@@ -82,7 +127,7 @@ note = ""
 			href="https://www.tucsweden.se/utbildning/yh-utbildningar/systemutvecklare-net-distans/" target="_blank">
 			TUC</a
 		>
-		<p id="internshiptext"> Internships</p>
+		<p id="internshiptext">Internships</p>
 
 		<a id="internshiplink"href="https://www.tietoevry.com/" target="_blank">TietoEvry</a> 
 		
@@ -97,11 +142,69 @@ note = ""
 	class="button"
 	><i class="fa-brands fa-linkedin"></i
 ></a>
+<script>
+	function contact() {
+	  alert("Thank you for your message!");	 
+	}
+  </script>
+
+<form 
+ onsubmit="contact()"
+	action="../Josse/index.html"
+	method="POST"
+	data-netlify="true"
+>
+		<div class="mt-2">
+			<div
+				id="tabs-1-panel-1"
+				class="p-0.5 -m-0.5 rounded-lg"
+				aria-labelledby="tabs-1-tab-1"
+				role="tabpanel"
+				tabindex="0"
+			>
+				<label for="comment" class="sr-only"></label>
+				<div>
+					<textarea
+						rows="1"
+						name="comment"
+						id="comment"
+						class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+						placeholder=""
+					></textarea>
+				</div>
+			</div>
+			<div
+				id="tabs-1-panel-2"
+				class="p-0.5 -m-0.5 rounded-lg"
+				aria-labelledby="tabs-1-tab-2"
+				role="tabpanel"
+				tabindex="0"
+			>
+				<div class="border-b">
+					<div
+						class="mx-px mt-px px-3 pt-2 pb-12 text-sm leading-5 text-gray-800"
+					></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mt-2">
+		<button
+			type="submit"
+			class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+		>
+			Say hi!
+		</button>
+	</div>
+</form>
 <img
 	id="josefin"
-	src="/docs/content-record-collector-net/Pictures/jojo.jpg"
-	alt="picure of Josefin"
+	src="/Pictures/jojo.jpg"
+	alt="picture of Josefin"
 />
+<link href="/styles.css" rel="stylesheet" />
+
+
 
 <svg
 	width="100%"
