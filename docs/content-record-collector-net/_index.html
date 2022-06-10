@@ -14,7 +14,7 @@ note = ""
 <style>
 
 #linkedin{
-    top: 16rem;
+    top: 12rem;
     font: 1rem;
     z-index: 1000;
     background-image: linear-gradient(white, white, white,white);
@@ -22,7 +22,7 @@ note = ""
   }
 
   #github{
-    top: 16rem;
+    top: 12rem;
     font: 1rem;
     z-index: 1000;
     background-image: linear-gradient(white, white, white,white);
@@ -98,7 +98,7 @@ note = ""
 		display: none;
 		position: absolute;
 		background-color: #f9f9f9;
-		min-width: 3rem;
+		min-width: 6rem;
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		padding: 1rem 1.5rem;
 		z-index: 1;
@@ -112,14 +112,24 @@ note = ""
 
 	.mt-2{
 		width: 9rem;
-		float: left;
+		/* float: left;
 		margin-top: 1rem;
-		margin-left: 1rem;
+		margin-left: 1rem; */
 	}
 </style>
 
 <div class="dropdown">
 	<span id="developertext">System Developer .NET</span>
+	<a id="github" href="https://github.com/josefinunefaldt" class="button" target="_blank"
+	><i class="fa-brands fa-github"></i
+></a>
+<a
+	id="linkedin"
+	href="https://www.linkedin.com/in/josefin-unefaldt-systemutvecklare/ target="_blank""
+	class="button"
+	><i class="fa-brands fa-linkedin"></i
+></a>
+
 	<div class="dropdown-content">
 		<p id="schooltext">Education</p>
 		<a
@@ -130,25 +140,8 @@ note = ""
 		<p id="internshiptext">Internships</p>
 
 		<a id="internshiplink"href="https://www.tietoevry.com/" target="_blank">TietoEvry</a> 
-		
-	</div>
-</div>
-<a id="github" href="https://github.com/josefinunefaldt" class="button" target="_blank"
-	><i class="fa-brands fa-github"></i
-></a>
-<a
-	id="linkedin"
-	href="https://www.linkedin.com/in/josefin-unefaldt-systemutvecklare/ target="_blank""
-	class="button"
-	><i class="fa-brands fa-linkedin"></i
-></a>
-<script>
-	function contact() {
-	  alert("Thank you for your message!");	 
-	}
-  </script>
 
-<form 
+		<form 
  onsubmit="contact()"
 	action="../Josse/index.html"
 	method="POST"
@@ -187,16 +180,27 @@ note = ""
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="mt-2">
 		<button
-			type="submit"
-			class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-		>
-			Say hi!
-		</button>
+		type="submit"
+		class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+	>
+		Say hi!
+	</button>
 	</div>
+	
+
 </form>
+		
+	</div>
+</div>
+
+<script>
+	function contact() {
+	  alert("Thank you for your message!");	 
+	}
+  </script>
+
+
 <img
 	id="josefin"
 	src="/Pictures/jojo.jpg"
