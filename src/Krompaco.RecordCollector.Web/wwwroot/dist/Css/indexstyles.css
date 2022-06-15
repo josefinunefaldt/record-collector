@@ -37,7 +37,10 @@
       width: 25%;
       height: 25%;
       margin-left: 19rem;
-      border-radius: 100%;     
+      border-radius: 100%; 
+	  max-width:100%;
+	  height:auto;  
+
   }
   #title{
     font-size: 30px;
