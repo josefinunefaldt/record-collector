@@ -50,22 +50,26 @@
 		margin-top: 0px;
 		margin-bottom: 0px;
 		text-decoration: none;
+		color: black;
 	}
 	#internshiptext {
 		font-size: 15px;
 		margin-top: 0px;
 		margin-bottom: 0px;
+		font-weight:600;
 	}
 	#schoollink {
 		font-size: 12px;
 		margin-top: 0px;
 		margin-bottom: 0px;
 		text-decoration: none;
+		color: black;
 	}
 	#schooltext {
 		margin-top: 0px;
 		font-size: 15px;
 		margin-bottom: 0px;
+		font-weight:600;
 	}
 
 	#schoollink:hover{
@@ -73,8 +77,8 @@
 	} 
 	#internshiplink:hover{
 		background-color:  #f9f9f9;;
-	} 
-
+	}
+	
 	.dropdown {
 		position: relative;
 		display: inline-block;
