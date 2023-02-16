@@ -102,20 +102,6 @@
                        
                     }
                     }
-
-
-
-                    @foreach (var ni in Model.NavigationItems ?? new List<MenuItemViewModel>())
-                    {
-                        @if (Model.CurrentPath == ni.RelativeUrl?.ToString())
-                        {
-                            <a aria-current="page" href="@ni.RelativeUrl"><b>@ni.Text</b></a>
-                        }
-                        else
-                        {
-                            <a href="@ni.RelativeUrl">@ni.Text</a>
-                        }
-                    }
                 </nav>
             </header>
         }       }
