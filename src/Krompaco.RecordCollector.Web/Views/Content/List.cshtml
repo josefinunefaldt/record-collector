@@ -8,32 +8,56 @@
 @{
 	var linkClasses1 = "rc-link";
 	var h1Shown = false;
-	var isRootWithCultureSelection = Model.RootCultures?.Count > 0 && Model.CurrentPath == "/";
+	var isRootWithCultureSelection = Model.RootCultures?.Count > 0;
 }
 
 @section head {
-	@if (Model.PagedDescendantPages?.Count > 0)
+    @if (isRootWithCultureSelection && Model.ContentProperties.FrontendSetup == "simplecss")
+    {
+        <header>
+            <h1>@Model.Localizer["Select language"]</h1>
+            <nav aria-label="@Model.Localizer["Main navigation"]">
+                @foreach (var c in Model.RootCultures ?? new List<CultureInfo>())
+                {
+                    <a lang="@c.Name" href="/@c.Name.ToLower(Model.CurrentCulture)/">@c.NativeName.FirstCharToUpper() </a>
+
+                }
+
+            </nav>
+        </header>
+    }
+	@*@if (Model.PagedDescendantPages?.Count > 0)
 	{
 		<link rel="alternate" type="application/rss+xml" title="@Model.Title" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)rss.xml" />
 	}
-	<link rel="canonical" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)" />
-}
+	<link rel="canonical" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)" />*@
 
+
+}
+@*
 @section header {
+
+      <h4>isRootWithCultureSelection = @isRootWithCultureSelection</h4>
 	@if (isRootWithCultureSelection && Model.ContentProperties.FrontendSetup == "simplecss")
 	{
 		<header>
-			<h1>@Model.Localizer["Select language"]</h1>
 			<nav aria-label="@Model.Localizer["Main navigation"]">
-				@foreach (var c in Model.RootCultures ?? new List<CultureInfo>())
-				{
-					<a lang="@c.Name" href="/@c.Name.ToLower(Model.CurrentCulture)/">@c.NativeName.FirstCharToUpper()</a>
-				}
+
+                @if (Model.CurrentCulture?.Name == "en")
+                {
+                    <a lang="@Model.CurrentCulture?.Name" href="/@Model.CurrentCulture?.Name.ToLower(Model.CurrentCulture)/about">ABOUT</a>
+                }
+
+                else
+                {
+                    <a lang="@Model.CurrentCulture?.Name" href="/@Model.CurrentCulture?.Name.ToLower(Model.CurrentCulture)/about">ABOUT</a>
+                }
+
 			</nav>
 		</header>
 	}
-}
-
+}*@
+@*
 @if (Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == null || Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == 1)
 {
 	h1Shown = true;
@@ -41,7 +65,7 @@
 	{
 		<div class="max-w-4xl mx-auto pt-10 px-4 sm:px-6 lg:px-8">
 			<h1 class="text-4xl leading-tight tracking-tight font-extrabold text-gray-900 sm:text-5xl">
-				@Model.Title
+				@Model.Title 
 			</h1>
 		</div>
 	}
@@ -57,8 +81,9 @@
 			}
 		</div>
 	</div>
-}
+}*@
 
+@*
 @if (Model.PagedDescendantPages?.Count > 0)
 {
 	<div class="max-w-4xl mx-auto pt-10 px-4 sm:px-6 lg:px-8">
@@ -109,7 +134,7 @@
 
 						@if (Model.ContentProperties?.FrontendSetup != "simplecss")
 						{
-							@* Don't link categories from listings, too many links with same text *@
+						
 							@if (sp.Categories.Count > 0)
 							{
 								<div class="mt-6 flex flex-row space-x-2">
@@ -127,9 +152,7 @@
 					</div>
 				</div>
 			}
-		</div>
-	</div>
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8">
-		@await Html.PartialAsync("Pagination", Model.Pagination, new ViewDataDictionary(ViewData) {{"FrontendSetup", Model.ContentProperties?.FrontendSetup}})
-	</div>
-}
+		</div>*@
+@*	</div>*@
+
+
