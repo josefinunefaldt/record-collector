@@ -86,21 +86,23 @@
                    
                     @if (Model.CurrentCulture?.Name == "en")
                     {
-                        <a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page">@Model.Localizer["HOME"]</a>
+                        //<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page">@Model.Localizer["HOME"]</a>
+                        Page("home");
                         Page("about");
                         Page("contact");
                         Page("experiences");
+                      
                     }
 
                     else
                     {
-                        <a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page">@Model.Localizer["HEM"]</a>
-
+                        //<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page">@Model.Localizer["HEM"]</a>
+                        Page("hem");
                         Page("om");
                         Page("kontakt");
                         Page("erfarenheter");
+                    
                        
-                    }
                     }
                 </nav>
             </header>
