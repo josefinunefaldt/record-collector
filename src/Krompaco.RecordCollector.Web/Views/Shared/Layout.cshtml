@@ -11,7 +11,7 @@
 @{
     void Page(string chosenPage)
     {
-      <a lang=" @Model.CurrentCulture?.Name" href="/@Model.CurrentCulture?.Name.ToLower(Model.CurrentCulture)/@chosenPage">@chosenPage.ToUpper()</a>
+        <a lang=" @Model.CurrentCulture?.Name" href="/@Model.CurrentCulture?.Name.ToLower(Model.CurrentCulture)/@chosenPage">@chosenPage.ToUpper()</a>
     }
 }
 <!DOCTYPE html>
@@ -80,9 +80,11 @@
     {
         @if (Model.ContentProperties?.FrontendSetup == "simplecss")
         {
+     
             <header>
+                <div id="header-container">
 
-                <nav aria-label="@Model.Localizer["Main navigation"]">
+                    <nav aria-label="@Model.Localizer["Main navigation"]">
                    
                     @if (Model.CurrentCulture?.Name == "en")
                     {
@@ -105,7 +107,9 @@
                        
                     }
                 </nav>
+                </div>
             </header>
+          
         }       }
     @await RenderSectionAsync("header", false)
     <main id="main">
