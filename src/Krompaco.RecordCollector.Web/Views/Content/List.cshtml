@@ -18,20 +18,34 @@
 	}
 	<link rel="canonical" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)" />
 }
-@*
+
 @section header {
-	@if (isRootWithCultureSelection && Model.ContentProperties.FrontendSetup == "simplecss")
-	{
-		<header>
-			<h1>@Model.Localizer["Select language"]</h1>
-			<nav aria-label="@Model.Localizer["Main navigation"]">
-				@foreach (var c in Model.RootCultures ?? new List<CultureInfo>())
-				{
-					<a lang="@c.Name" href="/@c.Name.ToLower(Model.CurrentCulture)/">@c.NativeName.FirstCharToUpper()</a>
-				}
-			</nav>
-		</header>
-	*@}
+	<header>
+				<h1>
+					@Model.Title
+				</h1>
+				<nav aria-label="@Model.Localizer["Main navigation"]">
+					@if (Model.CurrentPath == "/" || Model.RootCultures?.Count > 0 && Model.CurrentCulture?.Name == Model.CurrentPath?.Replace("/", string.Empty))
+					{
+						<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page"><b>@Model.Localizer["Home"]</b></a>
+					}
+					else
+					{
+						<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")">@Model.Localizer["Home"]</a>
+					}
+					@foreach (var ni in Model.NavigationItems ?? new List<MenuItemViewModel>())
+					{
+						@if (Model.CurrentPath == ni.RelativeUrl?.ToString())
+						{
+							<a aria-current="page" href="@ni.RelativeUrl"><b>@ni.Text</b></a>
+						}
+						else
+						{
+							<a href="@ni.RelativeUrl">@ni.Text</a>
+						}
+					}
+				</nav>
+			</header>
 }
 
 @if (Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == null || Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == 1)
