@@ -89,11 +89,9 @@
                     @if (Model.CurrentCulture?.Name == "en")
                     {
                         //<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page">@Model.Localizer["HOME"]</a>
-                            <a lang=" @Model.CurrentCulture?.Name" href="/@Model.CurrentCulture?.Name.ToLower(Model.CurrentCulture)/about">abouuut</a>
-                        Page("about");
-                        Page("contact");
-                        Page("experiences");
-                      
+
+                            <A HREF="/en/about">Go to the Home Page</A>
+                  
                     }
 
                     else
