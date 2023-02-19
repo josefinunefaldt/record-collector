@@ -10,15 +10,26 @@
 	var h1Shown = false;
 	var isRootWithCultureSelection = Model.RootCultures?.Count > 0 && Model.CurrentPath == "/";
 }
+<p>HEJ LIST</p>
 
-@section head {
+<style>
+    body{
+        background-image: url('files/mountain.jpg');min-height:100vh;
+        max-width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+</style>
+@*@section head {
 	@if (Model.PagedDescendantPages?.Count > 0)
 	{
 		<link rel="alternate" type="application/rss+xml" title="@Model.Title" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)rss.xml" />
 	}
 	<link rel="canonical" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)" />
 }
-
+*@
+@*
 @section header {
 	<header>
 				<h1>
@@ -46,7 +57,7 @@
 					}
 				</nav>
 			</header>
-}
+}*@
 
 @if (Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == null || Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == 1)
 {
@@ -54,9 +65,9 @@
 	if (Model.ContentProperties?.FrontendSetup != "simplecss")
 	{
 		<div class="max-w-4xl mx-auto pt-10 px-4 sm:px-6 lg:px-8">
-			<h1 class="text-4xl leading-tight tracking-tight font-extrabold text-gray-900 sm:text-5xl">
+			@*<h1 class="text-4xl leading-tight tracking-tight font-extrabold text-gray-900 sm:text-5xl">
 				@Model.Title
-			</h1>
+			</h1>*@
 		</div>
 	}
 	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -72,7 +83,7 @@
 		</div>
 	</div>
 }
-
+@*
 @if (Model.PagedDescendantPages?.Count > 0)
 {
 	<div class="max-w-4xl mx-auto pt-10 px-4 sm:px-6 lg:px-8">
@@ -123,8 +134,8 @@
 
 						@if (Model.ContentProperties?.FrontendSetup != "simplecss")
 						{
-							@* Don't link categories from listings, too many links with same text *@
-							@if (sp.Categories.Count > 0)
+		
+						@*	@if (sp.Categories.Count > 0)
 							{
 								<div class="mt-6 flex flex-row space-x-2">
 									@foreach (var category in sp.Categories)
@@ -145,5 +156,5 @@
 	</div>
 	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-8">
 		@await Html.PartialAsync("Pagination", Model.Pagination, new ViewDataDictionary(ViewData) {{"FrontendSetup", Model.ContentProperties?.FrontendSetup}})
-	</div>
-}
+	</div>*@
+

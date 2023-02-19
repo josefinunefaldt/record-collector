@@ -31,10 +31,10 @@
 	}
 </head>
 <body class="bg-white text-gray-900 font-rc">
-	@if (Model.RootCultures?.Count > 0 && Model.CurrentPath != "/" || Model.NavigationItems?.Count > 0)
+	@*@if (Model.RootCultures?.Count > 0 && Model.CurrentPath != "/" || Model.NavigationItems?.Count > 0)
 	{
 		@if (Model.ContentProperties?.FrontendSetup == "simplecss")
-		{
+		{*@
 			<header>
 				<h1>
 					@Model.Title
@@ -61,7 +61,7 @@
 					}
 				</nav>
 			</header>
-		}
+@*		}
 		else
 		{
 			var linkClasses = "rc-link";
@@ -112,8 +112,8 @@
 					</div>
 				</div>
 			</div>
-		}
-	}
+		}*@
+@*	}*@
 	@await RenderSectionAsync("header", false)
 	<main id="main">
 		@RenderBody()

@@ -1,8 +1,8 @@
 +++
-title = "The .NET 6.0 static site toolkit"
-description = "The documentation and Record Collector demo web site."
+title = "HOME"
+description = ""
 keywords = "C# HTML"
 +++
-This is the official site for the .NET static site generator Record Collector.
+YOOOOOOOOOOOOOOOOOOOOOOOOO
 
-The [Github repo](https://github.com/krompaco/record-collector) has the framework code, templates and content that make up this site.
+<body style=background-image:url('/files/mountain.jpg')</body>
