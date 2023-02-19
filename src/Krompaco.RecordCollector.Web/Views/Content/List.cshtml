@@ -18,7 +18,7 @@
 	}
 	<link rel="canonical" href="@Model.ContentProperties.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)" />
 }
-
+@*
 @section header {
 	@if (isRootWithCultureSelection && Model.ContentProperties.FrontendSetup == "simplecss")
 	{
@@ -31,7 +31,7 @@
 				}
 			</nav>
 		</header>
-	}
+	*@}
 }
 
 @if (Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == null || Model.Pagination?.Items?.FirstOrDefault(x => x.IsSelected)?.Page == 1)
