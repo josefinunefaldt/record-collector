@@ -36,17 +36,15 @@
 		@if (Model.ContentProperties?.FrontendSetup == "simplecss")
 		{*@
 			<header>
-				<h1>
-					@Model.Title
-				</h1>
+	
 				<nav aria-label="@Model.Localizer["Main navigation"]">
 					@if (Model.CurrentPath == "/" || Model.RootCultures?.Count > 0 && Model.CurrentCulture?.Name == Model.CurrentPath?.Replace("/", string.Empty))
 					{
-						<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page"><b>@Model.Localizer["Home"]</b></a>
+						<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")" aria-current="page">@Model.Localizer["HOME"]</a>
 					}
 					else
 					{
-						<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")">@Model.Localizer["Home"]</a>
+						<a href="@(Model.RootCultures?.Count > 0 ? $"/{Model.CurrentCulture?.Name}/" : "/")">@Model.Localizer["HOME"]</a>
 					}
 					@foreach (var ni in Model.NavigationItems ?? new List<MenuItemViewModel>())
 					{
@@ -118,7 +116,7 @@
 	<main id="main">
 		@RenderBody()
 	</main>
-	<footer class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-gray-500">
+	@*<footer class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-gray-500">
 		@{
 			var footerLinkClasses = "rc-link text-lg";
 			var isRootWithCultureSelection = Model.RootCultures?.Count > 0 && Model.CurrentPath == "/";
@@ -142,6 +140,6 @@
 				<a href="https://record-collector.net/" class="@footerLinkClasses">Record Collector</a>
 			</p>
 		</div>
-	</footer>
+	</footer>*@
 </body>
 </html>
