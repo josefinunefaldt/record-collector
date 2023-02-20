@@ -40,7 +40,14 @@
 	<div class="single prose prose-lg max-w-none sm:prose-xl pb-10">
 		@if (Model.CurrentPage?.ContentType == ContentType.Markdown)
 		{
+            if (Model.CurrentPath == "/pages/about/")
+            {
+                <div id="vl"></div>
+
+            }
 			@Html.Raw(Markdown.ToHtml(Model.CurrentPage?.Content ?? string.Empty, Model.MarkdownPipeline))
+
+          
 		}
 		else
 		{
