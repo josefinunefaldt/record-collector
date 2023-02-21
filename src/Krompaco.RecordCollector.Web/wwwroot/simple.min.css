@@ -241,7 +241,6 @@ header > nav {
 	header > nav a {
 		border: none;
 		padding: 0;
-		text-decoration: underline;
 		line-height: 1
 	}
 }
@@ -450,21 +449,28 @@ mark {
 	background-color: var(--marked)
 }
 
+#kalle {
+	float: right;
+	right: 40%;
+	position: relative;
+	margin: revert;
+	margin-top: -20%;
+}
 img, video {
 	max-width: 100%;
 	height: auto;
 	border-radius: 50%;
 	margin-top: 15%;
-	max-width: 15rem;
-	max-width: 15rem;
-	position: relative;
+	max-width: 30%;
+	max-width: 30%;
 	margin-bottom: 200%;
-	margin-top: -40%;
+	margin-top: -35%;
 }
 #vl {
 	border-left: 1px solid black;
 	height: 250px;
 	margin-left:50%;
+	margin-top:30px;
 }
 
 figure {
@@ -561,3 +567,39 @@ progress {
 	progress:indeterminate::-moz-progress-bar {
 		background-color: var(--accent-bg)
 	}
+
+
+@media (max-width: 1121px) {
+	#vl {
+		min-height:12px;
+	}
+
+	img {
+		margin-left: 12.5%;
+	}
+
+	#kalle {
+		margin-right: -4%;
+	}
+	}
+
+
+	@media (max-width: 767px) {
+
+		#vl {
+			min-height: 12px;
+		}
+
+		img {
+			margin-top: -70%;
+			margin-left: 12.5%;
+		}
+
+		#kalle {
+			margin-top: -55%;
+			margin-right: -4%;
+		}
+
+
+		
+		}

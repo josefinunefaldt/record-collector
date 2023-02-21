@@ -1,7 +1,6 @@
 ﻿@using Krompaco.RecordCollector.Content.Models
 @using Markdig
 @model SinglePageViewModel
-<p>HEEEEEEEEEEJ</p>
 @section head {
 	<link rel="canonical" href="@Model.ContentProperties?.SiteUrl.TrimEnd('/')@(Model.CurrentPage?.RelativeUrl)" />
 }
@@ -19,7 +18,7 @@
     body {
    background-color:#b6c0b3;
     }
-    /*
+    /*3
         body::after{
 
             position: absolute;
@@ -35,7 +34,7 @@
 
 </style>
 
-<p>HEJ SINGLE</p>
+
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 	<div class="single prose prose-lg max-w-none sm:prose-xl pb-10">
 		@if (Model.CurrentPage?.ContentType == ContentType.Markdown)
@@ -43,6 +42,7 @@
             if (Model.CurrentPath == "/pages/about/")
             {
                 <div id="vl"></div>
+                <div id="kalle">HEjj</div>
 
             }
 			@Html.Raw(Markdown.ToHtml(Model.CurrentPage?.Content ?? string.Empty, Model.MarkdownPipeline))

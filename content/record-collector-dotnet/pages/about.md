@@ -2,10 +2,12 @@
 linkTitle = "ABOUT"
 title = "ABOUT"
 description = ""
-weight = 10
+weight = 100
 +++
-ABOUT
 
 
 ![picture of josefin](https://josefinunefaldt.netlify.app/files/portrait.png)
+
+
+
 

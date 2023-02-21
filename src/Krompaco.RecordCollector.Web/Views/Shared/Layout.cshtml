@@ -37,7 +37,6 @@
 		@if (Model.ContentProperties?.FrontendSetup == "simplecss")
 		{*@
 			<header>
-	
 				<nav aria-label="@Model.Localizer["Main navigation"]">
 					@if (Model.CurrentPath == "/" || Model.RootCultures?.Count > 0 && Model.CurrentCulture?.Name == Model.CurrentPath?.Replace("/", string.Empty))
 					{
