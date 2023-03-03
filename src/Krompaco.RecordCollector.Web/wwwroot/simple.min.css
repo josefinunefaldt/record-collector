@@ -225,7 +225,7 @@ header > nav {
 	header > nav a, header > nav a:visited {
 	/*	margin: 0 .5rem 1rem .5rem;
 		border: 1px solid var(--border);
-		border-radius: 5px*/;
+		border-radius: 5px*/
 		color: var(--text);
 		display: inline-block;
 		padding: .1rem 1rem;
@@ -423,6 +423,33 @@ input[type=radio] {
 		width: 100%
 	}
 }
+#Portrait-josefin{
+	border-radius: 50%;
+	max-width: 15rem;
+}
+#flex-container{
+		margin-top: 5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7rem;
+		align-items: flex-start;
+}
+
+#vertical-line{
+	border: 0.5px solid black;
+	border-width: thin !important;
+	height:15rem;
+}
+
+#about{
+font-weight: bold;
+text-align: center;
+}
+#mountain{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
 
 input[type=checkbox], input[type=radio] {
 	width: auto
@@ -449,29 +476,6 @@ mark {
 	background-color: var(--marked)
 }
 
-#kalle {
-	float: right;
-	right: 40%;
-	position: relative;
-	margin: revert;
-	margin-top: -20%;
-}
-img, video {
-	max-width: 100%;
-	height: auto;
-	border-radius: 50%;
-	margin-top: 15%;
-	max-width: 30%;
-	max-width: 30%;
-	margin-bottom: 200%;
-	margin-top: -35%;
-}
-#vl {
-	border-left: 1px solid black;
-	height: 250px;
-	margin-left:50%;
-	margin-top:30px;
-}
 
 figure {
 	margin: 0;
@@ -570,36 +574,23 @@ progress {
 
 
 @media (max-width: 1121px) {
-	#vl {
-		min-height:12px;
-	}
+	
 
-	img {
-		margin-left: 12.5%;
-	}
-
-	#kalle {
-		margin-right: -4%;
-	}
 	}
 
 
 	@media (max-width: 720px) {
 
-		#vl {
-			min-height: 12px;
-		}
-
-		img {
-			margin-top: -70%;
-			margin-left: 12.5%;
-		}
-
-		#kalle {
-			margin-top: -55%;
-			margin-right: -4%;
-		}
-
+#vertical-line{
+	display: none;
+	
+}
+#flex-container{
+	margin-left:15%;
+}
+#about-content{
+	margin-left:25%;
+}
 
 		
 		}
