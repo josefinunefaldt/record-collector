@@ -584,7 +584,7 @@ progress {
 	}
 
 
-	@media (max-width: 767px) {
+	@media (max-width: 720px) {
 
 		#vl {
 			min-height: 12px;
