@@ -445,7 +445,6 @@ input[type=radio] {
 	max-width: 15rem;
 }
 #flex-container{
-		margin-top: 5rem;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 6rem;
