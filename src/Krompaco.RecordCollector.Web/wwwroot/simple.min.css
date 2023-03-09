@@ -100,7 +100,7 @@ main {
 
 #footer-container{
 	text-align: center;
-	margin-top: 15rem;
+	margin-top: 7rem;
 	position: relative;
 	z-index: 100;
 	opacity: 0.5;
@@ -184,13 +184,25 @@ a, a:visited {
 	}
 
 [role=button], button, input[type=button], input[type=reset], input[type=submit], label[type=button] {
-	border: none;
-	border-radius: 5px;
-	background-color: var(--accent);
+	border: solid 1px;
+	border-color: black;
+    border-radius: 300px;
 	font-size: 1rem;
-	color: var(--bg);
-	padding: .7rem .9rem;
-	margin: .5rem 0
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+	margin: .5rem 0;
+	position: relative;
+	z-index: 100;
+	background-color: Transparent;
+	  background-repeat:no-repeat;
+	  cursor:pointer;
+	  overflow: hidden;
+	  margin-top: 4rem;
+	
+	
+	
 }
 
 	[role=button][aria-disabled=true], button[disabled], input[type=button][disabled], input[type=checkbox][disabled], input[type=radio][disabled], input[type=reset][disabled], input[type=submit][disabled], select[disabled] {
