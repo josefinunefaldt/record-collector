@@ -6,10 +6,13 @@
 <head>  
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>@Model.Title</title>
+	<title>Josefin Unefaldt</title>
 
-	<link href="/dist/manrope-wght.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+    <link href="./simple.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/simple.min.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="shortcut icon" href="/files/forest.png" type="image/ico">
+@*
+	
 
 	@if (!string.IsNullOrWhiteSpace(Model.Robots))
 	{
@@ -22,7 +25,7 @@
 	}
 	@await RenderSectionAsync("head", false)
 
-	@if (Model.ContentProperties?.FrontendSetup == "simplecss")
+@*	@if (Model.ContentProperties?.FrontendSetup == "simplecss")
 	{
 		<link href="./simple.min.css" rel="stylesheet" asp-append-version="true" />
         <link href="/simple.min.css" rel="stylesheet" asp-append-version="true" />   
@@ -31,7 +34,7 @@
 	{
 		<link href="/dist/styles.css" rel="stylesheet" asp-append-version="true" />
 		<script src="/dist/main.js" async asp-append-version="true"></script>      
-	}
+	}*@
 </head>
 <body class="bg-white text-gray-900 font-rc">
 	@*@if (Model.RootCultures?.Count > 0 && Model.CurrentPath != "/" || Model.NavigationItems?.Count > 0)
