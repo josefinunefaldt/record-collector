@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3 {
 	line-height: 1.1
 }
-
+a{text-decoration: none;}
 @media only screen and (max-width:720px) {
 	h1 {
 		font-size: 2.5rem
@@ -204,6 +204,12 @@ a, a:visited {
 	
 	
 }
+button:hover{
+ 
+	
+		box-shadow: 0px 2px 2px  #364107;;
+	  }
+
 
 	[role=button][aria-disabled=true], button[disabled], input[type=button][disabled], input[type=checkbox][disabled], input[type=radio][disabled], input[type=reset][disabled], input[type=submit][disabled], select[disabled] {
 		opacity: .5;
@@ -222,6 +228,7 @@ input[type=range] {
 abbr {
 	cursor: help
 }
+
 
 [role=button]:focus, [role=button]:not([aria-disabled=true]):hover, button:enabled:hover, button:focus, input[type=button]:enabled:hover, input[type=button]:focus, input[type=reset]:enabled:hover, input[type=reset]:focus, input[type=submit]:enabled:hover, input[type=submit]:focus, label[type=button]:focus, label[type=button]:hover {
 	filter: brightness(1.4);
@@ -244,8 +251,11 @@ header > nav {
 		justify-content: center;
 		list-style-type: none;
 		margin: 0;
-		padding: 0
+		padding: 0;
+		
 	}
+
+
 
 		header > nav ol li, header > nav ul li {
 			display: inline-block
@@ -259,11 +269,15 @@ header > nav {
 		display: inline-block;
 		padding: .1rem 1rem;
 		text-decoration: none;
+		
 	}
 
 		header > nav a:hover {
 			filter: brightness(1.4);
-			cursor: pointer
+			cursor: pointer;
+			color: #111;
+		transform: scale(1.1);
+		text-shadow: none;
 		}
 
 @media only screen and (max-width:720px) {
@@ -614,12 +628,9 @@ progress {
 	display: none;
 	
 }
-#flex-container{
 
-}
-#about-content{
-	
-}
 
 		
 		}
+
+	
