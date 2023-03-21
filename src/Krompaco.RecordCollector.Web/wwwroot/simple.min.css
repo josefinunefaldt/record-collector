@@ -56,6 +56,9 @@ html {
 	font-family: var(--sans-font);
 	scroll-behavior: smooth
 }
+#about-content{
+	margin-top: 60px;
+}
 
 body {
 	color: var(--text);
@@ -129,12 +132,12 @@ h1 {
 
 h2 {
 	font-size: 2.6rem;
-	margin-top: 3rem
+	/* margin-top: 3rem */
 }
 
 h3 {
 	font-size: 2rem;
-	margin-top: 3rem
+	/* margin-top: 3rem */
 }
 
 h4 {
@@ -475,6 +478,16 @@ input[type=radio] {
 		flex-wrap: wrap;
 		gap: 6rem;
 		align-items: flex-start;
+		
+}
+
+#flex-about-page {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 13rem;
+	margin-left: -200px;
+	margin-right: -200px;
+
 }
 
 #vertical-line{
