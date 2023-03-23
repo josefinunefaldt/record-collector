@@ -637,7 +637,31 @@ progress {
 
 
 @media (max-width: 1121px) {
+	#Portrait-josefin{
+		margin-left: 15%;
 	
+	}
+	#flex-education-page {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		margin-left: unset;
+		margin-right: unset;
+	}
+	#nanny-text{
+		margin-top: -12rem;
+	}
+	#about{
+		margin-left: unset;
+	}
+	#flex-about-page{
+		margin-left: unset;
+		margin-right: unset;
+	}
+	
+	#about-content{
+		margin-top: -2rem;
+	}
 
 	}
 
