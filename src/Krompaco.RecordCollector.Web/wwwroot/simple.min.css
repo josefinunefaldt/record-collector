@@ -481,6 +481,13 @@ input[type=radio] {
 		
 }
 
+#flex-education-page{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10rem;
+	margin-left: -200px;
+	margin-right: -200px;
+}
 #flex-about-page {
 	display: flex;
 	flex-wrap: wrap;
@@ -640,9 +647,29 @@ progress {
 #vertical-line{
 	display: none;
 	
+	
 }
+#Portrait-josefin{
+	margin-left: 15%;
 
-
+}
+#flex-education-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: unset;
+    margin-right: unset;
+}
+#nanny-text{
+	margin-top: -12rem;
+}
+#about{
+	margin-left: unset;
+}
+#flex-about-page{
+	margin-left: unset;
+	margin-right: unset;
+}
 		
 		}
 
