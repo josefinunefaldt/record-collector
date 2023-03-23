@@ -670,6 +670,10 @@ progress {
 	margin-left: unset;
 	margin-right: unset;
 }
+
+#about-content{
+	margin-top: -2rem;
+}
 		
 		}
 
